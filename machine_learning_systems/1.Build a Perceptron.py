@@ -34,7 +34,17 @@ class Perceptron:
             self.threshold = threshold
 
 
-x = numpy.array([1, 1, 1, 1])
-w = numpy.array([1, 1, 1, 1])
-per = Perceptron(w, 2)
-print(per.activate(x))
+# x = numpy.array([1, 1, 1, 1])
+# w = numpy.array([1, 1, 1, 1])
+# per = Perceptron(w, 2)
+# print(per.activate(x))
+n = int(input())
+m = int(input())
+list = []
+for i in range(n):
+    list.append(int(input()))
+index = -1
+for l,i in enumerate(list) :
+    if i == m :
+        index = l
+print(index)
