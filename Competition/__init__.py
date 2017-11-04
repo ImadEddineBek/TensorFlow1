@@ -61,6 +61,12 @@ W12 = tf.Variable(tf.truncated_normal([num_hidden2, num_hidden3],
 b12 = tf.Variable(tf.constant(0.1, shape=[num_hidden3]))
 h12 = tf.sigmoid(tf.matmul(h11, W12) + b12)
 
+num_hidden4 = 256
+
+W13 = tf.Variable(tf.truncated_normal([num_hidden3, num_hidden4],
+                                     stddev=1. / math.sqrt(num_hidden3)))
+b13 = tf.Variable(tf.constant(0.1, shape=[num_hidden4]))
+h13 = tf.sigmoid(tf.matmul(h12, W13) + b13)
 
 # Output Layer
 W2 = tf.Variable(tf.truncated_normal([num_hidden3, 3],
@@ -71,7 +77,7 @@ y = tf.nn.softmax(tf.matmul(h12, W2) + b2)
 
 cross_entropy = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=y_, logits=y))
 
-train_step = tf.train.AdagradOptimizer(0.1).minimize(cross_entropy)
+train_step = tf.train.AdamOptimizer(0.1).minimize(cross_entropy)
 correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
@@ -100,7 +106,7 @@ def minimize(learning_rate):
     return learning_rate / 1.6
 i = 0
 v= 0
-while v <78.5 or i <2000:
+while v <78.5 and i <2000:
     sess.run(train_step, feed_dict={y_: onehot_train, x: train})
 
     currentTest = sess.run(accuracy, feed_dict={y_: onehot_test, x: test})
@@ -132,6 +138,7 @@ while v <78.5 or i <2000:
     #     W_Max = W
     #     B_Max = B
     stuck += 1
+    print(i)
     i+=1
 
 
