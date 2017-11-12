@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76f23017-93cb-4404-b9d9-ac8f8edac39e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Competition/DoIStop" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Competition/DoIWrite" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Competition/DoIStop2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Competition/__init__2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Competition/fixData.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Competition/DoIWrite" afterPath="$PROJECT_DIR$/Competition/DoIWrite" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Competition/__init__.py" afterPath="$PROJECT_DIR$/Competition/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Competition/sample_submission.csv" afterPath="$PROJECT_DIR$/Competition/sample_submission.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Competition/test_data.csv" afterPath="$PROJECT_DIR$/Competition/test_data.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Competition/train_data.csv" afterPath="$PROJECT_DIR$/Competition/train_data.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/machine_learning_systems/section_1/learning from mnist.py" afterPath="$PROJECT_DIR$/machine_learning_systems/section_1/learning from mnist.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/machine_learning_systems/1.Build a Perceptron.py" afterPath="$PROJECT_DIR$/machine_learning_systems/1.Build a Perceptron.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,9 +25,10 @@
     <SUITE FILE_PATH="coverage/TensorFlow1$learning_from_mnist.coverage" NAME="learning from mnist Coverage Results" MODIFIED="1509907108521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/machine_learning_systems/section_1" />
     <SUITE FILE_PATH="coverage/TensorFlow1$libpath.coverage" NAME="libpath Coverage Results" MODIFIED="1509644603244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Anaconda3/Lib/site-packages/xgboost" />
     <SUITE FILE_PATH="coverage/TensorFlow1$CalculatingTheWeightsManually.coverage" NAME="CalculatingTheWeightsManually Coverage Results" MODIFIED="1509707035852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/machine_learning_systems/section_1" />
-    <SUITE FILE_PATH="coverage/TensorFlow1$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1510320627846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Competition" />
+    <SUITE FILE_PATH="coverage/TensorFlow1$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1510507579271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Competition" />
     <SUITE FILE_PATH="coverage/TensorFlow1$try.coverage" NAME="try Coverage Results" MODIFIED="1509692291522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/machine_learning_systems/section_1" />
     <SUITE FILE_PATH="coverage/TensorFlow1$DecisionTrees.coverage" NAME="DecisionTrees Coverage Results" MODIFIED="1510256819064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Competition" />
+    <SUITE FILE_PATH="coverage/TensorFlow1$fixData.coverage" NAME="fixData Coverage Results" MODIFIED="1510509357123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Competition" />
     <SUITE FILE_PATH="coverage/TensorFlow1$libpath__1_.coverage" NAME="libpath (1) Coverage Results" MODIFIED="1509648274183" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/xgboost/python-package/xgboost" />
     <SUITE FILE_PATH="coverage/TensorFlow1$let_sfuck_it.coverage" NAME="let'sfuck it Coverage Results" MODIFIED="1509695371194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/machine_learning_systems/section_1" />
     <SUITE FILE_PATH="coverage/TensorFlow1$NotInTensorFlow.coverage" NAME="NotInTensorFlow Coverage Results" MODIFIED="1509697409074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/machine_learning_systems/section_1" />
@@ -36,9 +36,10 @@
     <SUITE FILE_PATH="coverage/TensorFlow1$__init____1_.coverage" NAME="__init__ (1) Coverage Results" MODIFIED="1509644469101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Anaconda3/Lib/site-packages/xgboost" />
     <SUITE FILE_PATH="coverage/TensorFlow1$__init____2_.coverage" NAME="__init__ (2) Coverage Results" MODIFIED="1509648795356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Predict Network Attacks" />
     <SUITE FILE_PATH="coverage/TensorFlow1$mnist_softmax.coverage" NAME="mnist_softmax Coverage Results" MODIFIED="1509654579816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TensorFlow1$__init__2.coverage" NAME="__init__2 Coverage Results" MODIFIED="1510510323772" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Competition" />
     <SUITE FILE_PATH="coverage/TensorFlow1$Doctests_in_logistic.coverage" NAME="Doctests in logistic Coverage Results" MODIFIED="1509694565348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/machine_learning_systems/section_1" />
     <SUITE FILE_PATH="coverage/TensorFlow1$moreStats.coverage" NAME="moreStats Coverage Results" MODIFIED="1510114852120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Competition" />
-    <SUITE FILE_PATH="coverage/TensorFlow1$1_Build_a_Perceptron.coverage" NAME="1.Build a Perceptron Coverage Results" MODIFIED="1509724682079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="E:/tutoriels/other/Udacity - Machine Learning Engineer Nanodegree/4. P2 Build a Student Intervention System/1. Supervised Learning/7.5 Neural Nets Mini-project" />
+    <SUITE FILE_PATH="coverage/TensorFlow1$1_Build_a_Perceptron.coverage" NAME="1.Build a Perceptron Coverage Results" MODIFIED="1510428233264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/machine_learning_systems" />
     <SUITE FILE_PATH="coverage/TensorFlow1$logistic.coverage" NAME="logistic Coverage Results" MODIFIED="1509692596415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="E:/tutoriels/other/Deep learning with TensorFlow [Video]/CODE/5582_01_Code/5582_01_04_Code" />
   </component>
   <component name="DatabaseView">
@@ -54,8 +55,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="eclf10.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Competition/eclf10.csv">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Competition/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="155" column="78" lean-forward="true" selection-start-line="155" selection-start-column="78" selection-end-line="155" selection-end-column="78" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+                <element signature="e#172#454#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__2.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Competition/__init__2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="99" column="40" lean-forward="false" selection-start-line="99" selection-start-column="37" selection-end-line="99" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="newKindOfData.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Competition/newKindOfData.csv">
+          <provider selected="true" editor-type-id="LargeFileEditor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fixData.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Competition/fixData.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="1.Build a Perceptron.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/machine_learning_systems/1.Build a Perceptron.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1">
+              <caret line="95" column="10" lean-forward="false" selection-start-line="95" selection-start-column="10" selection-end-line="95" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DoIStop2" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Competition/DoIStop2">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -64,23 +121,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Competition/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="168" column="30" lean-forward="false" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DoIStop" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Competition/DoIStop">
+      <file leaf-file-name="train_data.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Competition/train_data.csv">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -90,7 +135,7 @@
         <entry file="file://$PROJECT_DIR$/Competition/DoIWrite">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -141,20 +186,25 @@
         <option value="$USER_HOME$/AppData/Local/Temp/Rar$DIa24436.48571/baseline_models.ipynb" />
         <option value="E:/tutoriels/other/Udacity - Machine Learning Engineer Nanodegree/4. P2 Build a Student Intervention System/1. Supervised Learning/7.5 Neural Nets Mini-project/1.Build a Perceptron.py" />
         <option value="$PROJECT_DIR$/machine_learning_systems/section_1/BasicNN.py" />
-        <option value="$PROJECT_DIR$/machine_learning_systems/1.Build a Perceptron.py" />
         <option value="$PROJECT_DIR$/Competition/log.txt" />
         <option value="$PROJECT_DIR$/machine_learning_systems/section_1/learning from mnist.py" />
         <option value="$USER_HOME$/Downloads/baseline_models.ipynb" />
-        <option value="$PROJECT_DIR$/Competition/train_data.csv" />
         <option value="$PROJECT_DIR$/Competition/moreStats.py" />
         <option value="$PROJECT_DIR$/Competition/TRYoUT.py" />
         <option value="$PROJECT_DIR$/Competition/DecisionTrees.py" />
         <option value="E:/tutoriels/other/Deep learning with TensorFlow [Video]/CODE/5582_02_Code/5582_02_02_Code/single_hidden.py" />
-        <option value="$PROJECT_DIR$/Competition/DoIWrite" />
         <option value="E:/tutoriels/other/Deep learning with TensorFlow [Video]/CODE/5582_02_Code/5582_02_05_Code/mlp.py" />
         <option value="$USER_HOME$/AppData/Local/Temp/Rar$DIa16284.12597/baseline_models.ipynb" />
         <option value="$PROJECT_DIR$/Competition/DoIStop" />
+        <option value="$PROJECT_DIR$/Competition/train_data - Copy.csv" />
+        <option value="$PROJECT_DIR$/Competition/deepNeural1198.csv" />
         <option value="$PROJECT_DIR$/Competition/__init__.py" />
+        <option value="$PROJECT_DIR$/machine_learning_systems/1.Build a Perceptron.py" />
+        <option value="$PROJECT_DIR$/Competition/train_data.csv" />
+        <option value="$PROJECT_DIR$/Competition/newKindOfData.csv" />
+        <option value="$PROJECT_DIR$/Competition/fixData.py" />
+        <option value="$PROJECT_DIR$/Competition/DoIWrite" />
+        <option value="$PROJECT_DIR$/Competition/__init__2.py" />
       </list>
     </option>
   </component>
@@ -170,8 +220,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="625" />
-    <option name="width" value="1302" />
+    <option name="x" value="953" />
+    <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -295,7 +345,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.__init__">
+  <component name="RunManager" selected="Python.__init__2">
+    <configuration name="1.Build a Perceptron" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/machine_learning_systems" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="TensorFlow1" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/machine_learning_systems/1.Build a Perceptron.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration name="1_make_sure" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -332,24 +400,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="TRYoUT" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Competition" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="TensorFlow1" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Competition/TRYoUT.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
     <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -368,25 +418,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="learning from mnist" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/machine_learning_systems/section_1" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="TensorFlow1" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/machine_learning_systems/section_1/learning from mnist.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="moreStats" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="__init__2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -399,7 +431,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="TensorFlow1" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Competition/moreStats.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Competition/__init__2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="fixData" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Competition" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="TensorFlow1" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Competition/fixData.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -407,18 +457,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.1_make_sure" />
       <item index="1" class="java.lang.String" itemvalue="Python.__init__" />
-      <item index="2" class="java.lang.String" itemvalue="Python.learning from mnist" />
-      <item index="3" class="java.lang.String" itemvalue="Python.DecisionTrees" />
-      <item index="4" class="java.lang.String" itemvalue="Python.moreStats" />
-      <item index="5" class="java.lang.String" itemvalue="Python.TRYoUT" />
+      <item index="2" class="java.lang.String" itemvalue="Python.DecisionTrees" />
+      <item index="3" class="java.lang.String" itemvalue="Python.__init__2" />
+      <item index="4" class="java.lang.String" itemvalue="Python.1.Build a Perceptron" />
+      <item index="5" class="java.lang.String" itemvalue="Python.fixData" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.__init__" />
-        <item index="1" class="java.lang.String" itemvalue="Python.DecisionTrees" />
-        <item index="2" class="java.lang.String" itemvalue="Python.TRYoUT" />
-        <item index="3" class="java.lang.String" itemvalue="Python.moreStats" />
-        <item index="4" class="java.lang.String" itemvalue="Python.learning from mnist" />
+        <item index="0" class="java.lang.String" itemvalue="Python.__init__2" />
+        <item index="1" class="java.lang.String" itemvalue="Python.fixData" />
+        <item index="2" class="java.lang.String" itemvalue="Python.__init__" />
+        <item index="3" class="java.lang.String" itemvalue="Python.1.Build a Perceptron" />
+        <item index="4" class="java.lang.String" itemvalue="Python.DecisionTrees" />
       </list>
     </recent_temporary>
   </component>
@@ -485,7 +535,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509799859767</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Shit is about to go down">
+      <created>1510320671420</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1510320671421</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -536,14 +593,14 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4143167" sideWeight="0.5042644" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826087" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32608697" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5869565" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3021739" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1945629" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3326087" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3021739" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23560767" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39370933" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3923913" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -608,50 +665,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="66" />
+      <option name="time" value="84" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Anaconda3/envs/tensorflow/Lib/imp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="171" column="0" lean-forward="false" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/docrunner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="351" column="0" lean-forward="false" selection-start-line="351" selection-start-column="0" selection-end-line="351" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/envs/tensorflow/Lib/site-packages/colorama/ansitowin32.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/envs/tensorflow/Lib/doctest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="1470" column="0" lean-forward="false" selection-start-line="1470" selection-start-column="0" selection-end-line="1470" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/machine_learning_systems/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/machine_learning_systems/section_1/logistic.py" />
-    <entry file="file://$PROJECT_DIR$/machine_learning_systems/section_1/try.py" />
-    <entry file="file://$PROJECT_DIR$/machine_learning_systems/section_1/XorInTensorFlow.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/machine_learning_systems/section_1/logs/events.out.tfevents.1509696963.BEKKOUCHE-IMAD" />
     <entry file="file://$PROJECT_DIR$/machine_learning_systems/section_1/AndInTensorFlow.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -706,16 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/machine_learning_systems/1.Build a Perceptron.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="861">
-          <caret line="44" column="15" lean-forward="false" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="15" />
-          <folding>
-            <element signature="e#346#522#1" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Competition/submission.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -727,13 +735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/envs/tensorflow/Lib/site-packages/tensorflow/python/framework/errors_impl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -783,25 +784,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Competition/test_data.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="3339" column="28" lean-forward="true" selection-start-line="3339" selection-start-column="28" selection-end-line="3339" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Anaconda3/envs/tensorflow/Lib/site-packages/sklearn/utils/metaestimators.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Competition/train_data.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -900,8 +887,22 @@
         <state relative-caret-position="137">
           <caret line="90" column="52" lean-forward="false" selection-start-line="90" selection-start-column="52" selection-end-line="90" selection-end-column="52" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#0#23#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa16284.12597/baseline_models.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa16284.10463/baseline_models.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
         </state>
       </provider>
     </entry>
@@ -913,7 +914,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Competition/DoIWrite">
+    <entry file="file://$PROJECT_DIR$/Competition/train_dataCopy.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -921,17 +922,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa16284.12597/baseline_models.ipynb">
+    <entry file="file://$PROJECT_DIR$/Competition/deepNeural1198.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa16284.29288/baseline_models.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
-          <selected id="18" />
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Competition/train_data2.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/tensorflow/Lib/site-packages/tensorflow/python/framework/errors_impl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="465" column="0" lean-forward="false" selection-start-line="465" selection-start-column="0" selection-end-line="465" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Competition/test_data.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70119">
+          <caret line="3339" column="28" lean-forward="false" selection-start-line="3339" selection-start-column="28" selection-end-line="3339" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Competition/DoIStop2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Competition/train_data.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Competition/newKindOfData.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="9306" column="0" lean-forward="false" selection-start-line="9306" selection-start-column="0" selection-end-line="9306" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Competition/fixData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/machine_learning_systems/1.Build a Perceptron.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1">
+          <caret line="95" column="10" lean-forward="false" selection-start-line="95" selection-start-column="10" selection-end-line="95" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Competition/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="168" column="30" lean-forward="false" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="30" />
+        <state relative-caret-position="357">
+          <caret line="155" column="78" lean-forward="true" selection-start-line="155" selection-start-column="78" selection-end-line="155" selection-end-column="78" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#172#454#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Competition/DoIWrite">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Competition/__init__2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="99" column="40" lean-forward="false" selection-start-line="99" selection-start-column="37" selection-end-line="99" selection-end-column="40" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>

@@ -28,7 +28,8 @@ if __name__ == '__main__':
         sub['target'] = pred
         sub['target'] = sub['target'].astype(int)
         sub.to_csv('deepNeural' + str(a) + '.csv', index=False)
-
+        file = open('deepNeural' + str(a) + '.csv')
+        file.close()
 
     def DoIpredictOnTest(i: int):
         file = open('DoIWrite', mode='r')
@@ -54,7 +55,7 @@ if __name__ == '__main__':
         return i
 
 
-    train = pd.read_csv('train_data.csv')
+    train = pd.read_csv('newKindOfData.csv')
     testing_data = pd.read_csv('test_data.csv')
 
     # extracting features and targets
@@ -69,13 +70,7 @@ if __name__ == '__main__':
 
     onehot = to_onehot(target)
 
-    # Split data into training and validation
-    indices = np.random.permutation(train.shape[0])
-    valid_cnt = int(train.shape[0] * 0.1)
-    dev_idx, training_idx = indices[:valid_cnt], indices[valid_cnt:]
     trainin = train
-    dev, train = train[dev_idx, :], train[training_idx, :]
-    onehot_dev, onehot_train = onehot[dev_idx, :], onehot[training_idx, :]
 
     sess = tf.InteractiveSession()
 
@@ -100,9 +95,9 @@ if __name__ == '__main__':
     num_of_hidden_units_in_layer_3 = 50
     num_of_hidden_units_in_layer_4 = 50
     num_of_hidden_units_in_layer_5 = 55
-    # num_of_hidden_units_in_layer_6 = 200
-    # num_of_hidden_units_in_layer_7 = 400
-    # num_of_hidden_units_in_layer_8 = 150
+    num_of_hidden_units_in_layer_6 = 200
+    num_of_hidden_units_in_layer_7 = 400
+    num_of_hidden_units_in_layer_8 = 150
     num_of_output_classes = 3
     # input layer
     layer1 = hiddenLayer(x, num_of_input, num_of_hidden_units_in_layer_1)
@@ -114,9 +109,9 @@ if __name__ == '__main__':
     layer5 = hiddenLayer(layer4, num_of_hidden_units_in_layer_4, num_of_hidden_units_in_layer_5)
 
 
-    # layer6 = hiddenLayer(layer5, num_of_hidden_units_in_layer_5, num_of_hidden_units_in_layer_6)
-    # layer7 = hiddenLayer(layer6, num_of_hidden_units_in_layer_6, num_of_hidden_units_in_layer_7)
-    # layer8 = hiddenLayer(layer7, num_of_hidden_units_in_layer_7, num_of_hidden_units_in_layer_8)
+    layer6 = hiddenLayer(layer5, num_of_hidden_units_in_layer_5, num_of_hidden_units_in_layer_6)
+    layer7 = hiddenLayer(layer6, num_of_hidden_units_in_layer_6, num_of_hidden_units_in_layer_7)
+    layer8 = hiddenLayer(layer7, num_of_hidden_units_in_layer_7, num_of_hidden_units_in_layer_8)
     # output layer
     def output_layer(previous_layer, num_previous_hidden, num_hidden: int):
         W_last = tf.Variable(tf.truncated_normal([num_previous_hidden, num_hidden],
@@ -126,7 +121,7 @@ if __name__ == '__main__':
         return tf.nn.softmax(tf.matmul(previous_layer, W_last) + b_last)
 
 
-    y = output_layer(layer5, num_of_hidden_units_in_layer_5, num_of_output_classes)
+    y = output_layer(layer8, num_of_hidden_units_in_layer_8, num_of_output_classes)
     ### End model specification, begin training code
 
 
@@ -144,17 +139,27 @@ if __name__ == '__main__':
     max_train = 0
     max_dev_index = 0
     max_train_index = 0
-    batch = 10000
+    batch = 99
     tf.global_variables_initializer().run()
     first = 0
     last = batch
+    train_accta = []
+    train_acc = 0
     while i != -10:
-
-        sess.run(train_step, feed_dict={x: train, y_: onehot_train})
+        for k in range(2996):
+            sess.run(train_step, feed_dict={x: train[first:last], y_: onehot[first:last]})
+            first += batch
+            last += batch
+        first = 0
+        last = batch
         if i % 100 == 0:
-            train_acc = sess.run(accuracy, feed_dict={x: train, y_: onehot_train})
-            dev_acc = (sess.run(accuracy, feed_dict={x: dev, y_: onehot_dev}))
-
+            for k in range(2996):
+                train_accta.append(sess.run(accuracy, feed_dict={x: train[first:last], y_: onehot[first:last]}))
+                first += batch
+                last += batch
+            train_acc = np.mean(train_accta)
+            first = 0
+            last = batch
             if train_acc > max_train:
                 max_train = train_acc
                 max_train_index = i
@@ -162,14 +167,8 @@ if __name__ == '__main__':
                 pred = sess.run(tf.argmax(y, 1), feed_dict={x: trainin})
                 conf = tf.confusion_matrix(labels=target, predictions=pred, num_classes=3)
                 print(sess.run(conf))
-            if dev_acc > max_dev:
-                max_dev = dev_acc
-                max_dev_index = i
-                print("                                  better dev", max_dev, i)
-                pred = sess.run(tf.argmax(y, 1), feed_dict={x: trainin})
-                conf = tf.confusion_matrix(labels=target, predictions=pred, num_classes=3)
-                print(sess.run(conf))
-            print(i, train_acc, dev_acc, max_train_index, max_dev_index)
+
+            print(i, train_acc, max_train_index, max_dev_index)
 
             DoIpredictOnTest(i)
             i = stop(i)
