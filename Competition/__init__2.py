@@ -31,6 +31,7 @@ if __name__ == '__main__':
         file = open('deepNeural' + str(a) + '.csv')
         file.close()
 
+
     def DoIpredictOnTest(i: int):
         file = open('DoIWrite', mode='r')
         rep = file.read()
@@ -82,7 +83,7 @@ if __name__ == '__main__':
 
 
     def hiddenLayer(previous_layer, num_previous_hidden, num_hidden: int):
-        W = tf.Variable(tf.truncated_normal([num_previous_hidden, num_hidden],
+        W = tf.Variable(tf.truncated_normal([num_previous_hidden, num_hidden], mean=1.0,
                                             stddev=2. / np.math.sqrt(num_previous_hidden)))
         b = tf.Variable(tf.constant(0.1, shape=[num_hidden]))
         h = tf.nn.relu(tf.matmul(previous_layer, W) + b)
@@ -90,14 +91,21 @@ if __name__ == '__main__':
 
 
     num_of_input = 41
-    num_of_hidden_units_in_layer_1 = 41
-    num_of_hidden_units_in_layer_2 = 50
-    num_of_hidden_units_in_layer_3 = 50
-    num_of_hidden_units_in_layer_4 = 50
-    num_of_hidden_units_in_layer_5 = 55
-    num_of_hidden_units_in_layer_6 = 200
-    num_of_hidden_units_in_layer_7 = 400
-    num_of_hidden_units_in_layer_8 = 150
+    num_of_hidden_units_in_layer_1 = 500
+    num_of_hidden_units_in_layer_2 = 300
+    num_of_hidden_units_in_layer_3 = 100
+    num_of_hidden_units_in_layer_4 = 1000
+    num_of_hidden_units_in_layer_5 = 200
+    # num_of_hidden_units_in_layer_6 = 250
+    # num_of_hidden_units_in_layer_7 = 400
+    # num_of_hidden_units_in_layer_8 = 500
+    # num_of_hidden_units_in_layer_9 = 400
+    # num_of_hidden_units_in_layer_10 = 300
+    # num_of_hidden_units_in_layer_11 = 200
+    # num_of_hidden_units_in_layer_12 = 100
+    # num_of_hidden_units_in_layer_13 = 200
+    # num_of_hidden_units_in_layer_14 = 300
+    # num_of_hidden_units_in_layer_15 = 200
     num_of_output_classes = 3
     # input layer
     layer1 = hiddenLayer(x, num_of_input, num_of_hidden_units_in_layer_1)
@@ -108,20 +116,28 @@ if __name__ == '__main__':
     layer4 = hiddenLayer(layer3, num_of_hidden_units_in_layer_3, num_of_hidden_units_in_layer_4)
     layer5 = hiddenLayer(layer4, num_of_hidden_units_in_layer_4, num_of_hidden_units_in_layer_5)
 
+    # layer6 = hiddenLayer(layer5, num_of_hidden_units_in_layer_5, num_of_hidden_units_in_layer_6)
+    # layer7 = hiddenLayer(layer6, num_of_hidden_units_in_layer_6, num_of_hidden_units_in_layer_7)
+    # layer8 = hiddenLayer(layer7, num_of_hidden_units_in_layer_7, num_of_hidden_units_in_layer_8)
+    # layer9 = hiddenLayer(layer8, num_of_hidden_units_in_layer_8, num_of_hidden_units_in_layer_9)
+    # layer10 = hiddenLayer(layer9, num_of_hidden_units_in_layer_9, num_of_hidden_units_in_layer_10)
+    # layer11 = hiddenLayer(layer10, num_of_hidden_units_in_layer_10, num_of_hidden_units_in_layer_11)
+    # layer12 = hiddenLayer(layer11, num_of_hidden_units_in_layer_11, num_of_hidden_units_in_layer_12)
+    # layer13 = hiddenLayer(layer12, num_of_hidden_units_in_layer_12, num_of_hidden_units_in_layer_13)
+    # layer14 = hiddenLayer(layer13, num_of_hidden_units_in_layer_13, num_of_hidden_units_in_layer_14)
+    # layer15 = hiddenLayer(layer14, num_of_hidden_units_in_layer_14, num_of_hidden_units_in_layer_15)
 
-    layer6 = hiddenLayer(layer5, num_of_hidden_units_in_layer_5, num_of_hidden_units_in_layer_6)
-    layer7 = hiddenLayer(layer6, num_of_hidden_units_in_layer_6, num_of_hidden_units_in_layer_7)
-    layer8 = hiddenLayer(layer7, num_of_hidden_units_in_layer_7, num_of_hidden_units_in_layer_8)
+
     # output layer
     def output_layer(previous_layer, num_previous_hidden, num_hidden: int):
-        W_last = tf.Variable(tf.truncated_normal([num_previous_hidden, num_hidden],
+        W_last = tf.Variable(tf.truncated_normal([num_previous_hidden, num_hidden], mean=1.0,
                                                  stddev=2. / np.math.sqrt(num_previous_hidden)))
         b_last = tf.Variable(tf.constant(0.1, shape=[num_hidden]))
         # Define model
         return tf.nn.softmax(tf.matmul(previous_layer, W_last) + b_last)
 
 
-    y = output_layer(layer8, num_of_hidden_units_in_layer_8, num_of_output_classes)
+    y = output_layer(layer5, num_of_hidden_units_in_layer_5, num_of_output_classes)
     ### End model specification, begin training code
 
 
@@ -131,7 +147,7 @@ if __name__ == '__main__':
     correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))
     accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
     # How we train
-    train_step = tf.train.RMSPropOptimizer(0.000001, centered=True).minimize(cross_entropy)
+    train_step = tf.train.MomentumOptimizer(learning_rate=0.001,momentum=0.9).minimize(cross_entropy)
 
     indices = np.random.permutation(train.shape[0])
     i = 0
@@ -139,28 +155,32 @@ if __name__ == '__main__':
     max_train = 0
     max_dev_index = 0
     max_train_index = 0
-    batch = 99
+    batch = 198
     tf.global_variables_initializer().run()
     first = 0
     last = batch
     train_accta = []
     train_acc = 0
     while i != -10:
-        for k in range(2996):
+        for k in range(1498):
+            # print(k, first, last)
             sess.run(train_step, feed_dict={x: train[first:last], y_: onehot[first:last]})
-            first += batch
-            last += batch
+            train_accta.append(sess.run(accuracy, feed_dict={x: train[first:last], y_: onehot[first:last]}))
+            print(train_accta[k])
+            first = (first + batch) % 169307
+            last = (last + batch) % 169307
+            if first > last:
+                first = 0
+                last = batch
+        train_acc = np.mean(train_accta)
+        print('                  ',train_acc)
         first = 0
         last = batch
-        if i % 100 == 0:
-            for k in range(2996):
-                train_accta.append(sess.run(accuracy, feed_dict={x: train[first:last], y_: onehot[first:last]}))
-                first += batch
-                last += batch
-            train_acc = np.mean(train_accta)
+        if i % 10 == 0:
+
             first = 0
             last = batch
-            if train_acc > max_train:
+            if train_acc >= max_train:
                 max_train = train_acc
                 max_train_index = i
                 print("                                  better train", max_train, i)
@@ -168,10 +188,9 @@ if __name__ == '__main__':
                 conf = tf.confusion_matrix(labels=target, predictions=pred, num_classes=3)
                 print(sess.run(conf))
 
-            print(i, train_acc, max_train_index, max_dev_index)
-
             DoIpredictOnTest(i)
             i = stop(i)
+        print(i, train_acc, max_train_index, max_dev_index)
         i += 1
 
 

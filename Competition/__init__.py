@@ -3,6 +3,18 @@ import numpy as np
 import pandas as pd
 from sklearn import preprocessing
 
+
+def fix_confusion(pred,conf):
+    print(pred)
+    print(type(pred))
+    print(conf)
+    print(type(conf))
+    print(type(conf[0]))
+    print(sess.run(conf))
+    print(sess.run(conf[0][1]))
+    return pred
+
+
 if __name__ == '__main__':
     def to_onehot(labels, nclasses=3):
         '''
@@ -54,11 +66,11 @@ if __name__ == '__main__':
         return i
 
 
-    train = pd.read_csv('train_data.csv')
+    train = pd.read_csv('train_data2.csv')
     testing_data = pd.read_csv('test_data.csv')
 
     # extracting features and targets
-    feature_names = [x for x in train.columns if x not in ['connection_id', 'target']]
+    feature_names = [x for x in train.columns if x not in ['target']]
     target = train['target']
     train = train[feature_names]
     testing_data = testing_data[feature_names]
@@ -96,13 +108,13 @@ if __name__ == '__main__':
 
     num_of_input = 41
     num_of_hidden_units_in_layer_1 = 41
-    num_of_hidden_units_in_layer_2 = 50
-    num_of_hidden_units_in_layer_3 = 50
-    num_of_hidden_units_in_layer_4 = 50
-    num_of_hidden_units_in_layer_5 = 55
-    # num_of_hidden_units_in_layer_6 = 200
-    # num_of_hidden_units_in_layer_7 = 400
-    # num_of_hidden_units_in_layer_8 = 150
+    num_of_hidden_units_in_layer_2 = 80
+    num_of_hidden_units_in_layer_3 = 100
+    num_of_hidden_units_in_layer_4 = 150
+    num_of_hidden_units_in_layer_5 = 200
+    num_of_hidden_units_in_layer_6 = 200
+    num_of_hidden_units_in_layer_7 = 100
+    num_of_hidden_units_in_layer_8 = 150
     num_of_output_classes = 3
     # input layer
     layer1 = hiddenLayer(x, num_of_input, num_of_hidden_units_in_layer_1)
@@ -114,9 +126,9 @@ if __name__ == '__main__':
     layer5 = hiddenLayer(layer4, num_of_hidden_units_in_layer_4, num_of_hidden_units_in_layer_5)
 
 
-    # layer6 = hiddenLayer(layer5, num_of_hidden_units_in_layer_5, num_of_hidden_units_in_layer_6)
-    # layer7 = hiddenLayer(layer6, num_of_hidden_units_in_layer_6, num_of_hidden_units_in_layer_7)
-    # layer8 = hiddenLayer(layer7, num_of_hidden_units_in_layer_7, num_of_hidden_units_in_layer_8)
+    layer6 = hiddenLayer(layer5, num_of_hidden_units_in_layer_5, num_of_hidden_units_in_layer_6)
+    layer7 = hiddenLayer(layer6, num_of_hidden_units_in_layer_6, num_of_hidden_units_in_layer_7)
+    layer8 = hiddenLayer(layer7, num_of_hidden_units_in_layer_7, num_of_hidden_units_in_layer_8)
     # output layer
     def output_layer(previous_layer, num_previous_hidden, num_hidden: int):
         W_last = tf.Variable(tf.truncated_normal([num_previous_hidden, num_hidden],
@@ -126,7 +138,7 @@ if __name__ == '__main__':
         return tf.nn.softmax(tf.matmul(previous_layer, W_last) + b_last)
 
 
-    y = output_layer(layer5, num_of_hidden_units_in_layer_5, num_of_output_classes)
+    y = output_layer(layer8, num_of_hidden_units_in_layer_8, num_of_output_classes)
     ### End model specification, begin training code
 
 
@@ -136,7 +148,7 @@ if __name__ == '__main__':
     correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))
     accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
     # How we train
-    train_step = tf.train.RMSPropOptimizer(0.000001, centered=True).minimize(cross_entropy)
+    train_step = tf.train.RMSPropOptimizer(0.001, centered=True).minimize(cross_entropy)
 
     indices = np.random.permutation(train.shape[0])
     i = 0
@@ -151,7 +163,7 @@ if __name__ == '__main__':
     while i != -10:
 
         sess.run(train_step, feed_dict={x: train, y_: onehot_train})
-        if i % 100 == 0:
+        if i % 20 == 0:
             train_acc = sess.run(accuracy, feed_dict={x: train, y_: onehot_train})
             dev_acc = (sess.run(accuracy, feed_dict={x: dev, y_: onehot_dev}))
 
@@ -168,6 +180,7 @@ if __name__ == '__main__':
                 print("                                  better dev", max_dev, i)
                 pred = sess.run(tf.argmax(y, 1), feed_dict={x: trainin})
                 conf = tf.confusion_matrix(labels=target, predictions=pred, num_classes=3)
+                pred_confusion = fix_confusion(pred,conf)
                 print(sess.run(conf))
             print(i, train_acc, dev_acc, max_train_index, max_dev_index)
 
@@ -182,4 +195,4 @@ if __name__ == '__main__':
         sub = pd.read_csv('sample_submission.csv')
         sub['target'] = pred
         sub['target'] = sub['target'].astype(int)
-        sub.to_csv('deepNeural' + str(a) + '.csv', index=False)
+        sub.to_csv('deepNeuraldeeeper' + str(a) + '.csv', index=False)
