@@ -72,7 +72,6 @@ if __name__ == '__main__':
     train = train[feature_names].values
     testing_data = testing_data[feature_names].values
     onehot = to_onehot(target)
-
     # Split data into training and validation
     indices = np.random.permutation(train.shape[0])
     valid_cnt = int(train.shape[0] * 0.1)
@@ -80,8 +79,9 @@ if __name__ == '__main__':
     trainin = train
     dev, train = train[dev_idx, :], train[training_idx, :]
     onehot_dev, onehot_train = onehot[dev_idx, :], onehot[training_idx, :]
-
-    sess = tf.InteractiveSession()
+    config = tf.ConfigProto()
+    config.gpu_options.allow_growth = True
+    sess = tf.InteractiveSession(config=config)
 
     # These will be inputs
     ## Input pixels, flattened
@@ -100,7 +100,7 @@ if __name__ == '__main__':
 
     num_of_input = 7
     num_of_hidden_units_in_layer_1 = 80
-    num_of_hidden_units_in_layer_2 = 200
+    num_of_hidden_units_in_layer_2 = 50
     num_of_hidden_units_in_layer_3 = 350
     num_of_hidden_units_in_layer_4 = 500
     num_of_hidden_units_in_layer_5 = 200
@@ -112,7 +112,9 @@ if __name__ == '__main__':
     layer1 = hiddenLayer(x, num_of_input, num_of_hidden_units_in_layer_1)
     # hidden layers
     layer2 = hiddenLayer(layer1, num_of_hidden_units_in_layer_1, num_of_hidden_units_in_layer_2)
-    layer3 = hiddenLayer(layer2, num_of_hidden_units_in_layer_2, num_of_hidden_units_in_layer_3)
+
+
+    # layer3 = hiddenLayer(layer2, num_of_hidden_units_in_layer_2, num_of_hidden_units_in_layer_3)
 
     # layer4 = hiddenLayer(layer3, num_of_hidden_units_in_layer_3, num_of_hidden_units_in_layer_4)
     # layer5 = hiddenLayer(layer4, num_of_hidden_units_in_layer_4, num_of_hidden_units_in_layer_5)
@@ -120,7 +122,6 @@ if __name__ == '__main__':
     # layer6 = hiddenLayer(layer5, num_of_hidden_units_in_layer_5, num_of_hidden_units_in_layer_6)
     # layer7 = hiddenLayer(layer6, num_of_hidden_units_in_layer_6, num_of_hidden_units_in_layer_7)
     # layer8 = hiddenLayer(layer7, num_of_hidden_units_in_layer_7, num_of_hidden_units_in_layer_8)
-
 
     # output layer
     def output_layer(previous_layer, num_previous_hidden, num_hidden: int):
@@ -131,7 +132,7 @@ if __name__ == '__main__':
         return tf.nn.softmax(tf.matmul(previous_layer, W_last) + b_last)
 
 
-    y = output_layer(layer3, num_of_hidden_units_in_layer_3, num_of_output_classes)
+    y = output_layer(layer2, num_of_hidden_units_in_layer_2, num_of_output_classes)
     ### End model specification, begin training code
 
     # Climb on cross-entropy
@@ -140,9 +141,8 @@ if __name__ == '__main__':
     correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))
     accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
     # How we train
-    train_step = tf.train.RMSPropOptimizer(0.00001, centered=True).minimize(cross_entropy)
+    train_step = tf.train.RMSPropOptimizer(0.0001).minimize(cross_entropy)
 
-    indices = np.random.permutation(train.shape[0])
     i = 0
     max_dev = 0
     max_train = 0
