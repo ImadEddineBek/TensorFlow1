@@ -30,10 +30,10 @@ if __name__ == '__main__':
     from sklearn.model_selection import cross_val_score
     from sklearn.tree import DecisionTreeClassifier
     from sklearn import svm
-
+    from sklearn.svm import SVC
     ## set up model
     for i in range(300, 301):
-        clf2 = RandomForestClassifier(n_estimators=2,n_jobs=10)
+        clf2 = SVC()
         clf2.fit(X_train, y_train)
         print(clf2.score(X_train, y_train))
         print(clf2.score(X_valid, y_valid))
